@@ -85,6 +85,8 @@ export default function Home() {
                   <SelectItem value="3">3 - Proposed Qualify Auto Short</SelectItem>
                   <SelectItem value="4">4 - Proposed Quality Auto Short Hue</SelectItem>
                   <SelectItem value="5">5 - Wildcard</SelectItem>
+                  <SelectItem value="6">6 - QualifyAuto highlight First Placement</SelectItem>
+                  <SelectItem value="7">7 - QualifyAuto highlight First Placement 2</SelectItem>
                 </SelectContent>
               </Select>
             </div>

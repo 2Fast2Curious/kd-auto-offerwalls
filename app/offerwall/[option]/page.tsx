@@ -31,28 +31,34 @@ export default function OfferwallPage({ params }: { params: { option: string } }
     {
       name: "Jennifer K.",
       text: "Saved $180/month switching to Progressive!",
-      image: "/placeholder.svg?height=40&width=40&query=happy woman smiling",
+      image: "/placeholder.svg?height=40&width=40",
     },
     {
       name: "Mark D.",
       text: "Best rates I've found in years. Highly recommend!",
-      image: "/placeholder.svg?height=40&width=40&query=satisfied man smiling",
+      image: "/placeholder.svg?height=40&width=40",
     },
     {
       name: "Rachel S.",
       text: "Quick quote process and amazing savings.",
-      image: "/placeholder.svg?height=40&width=40&query=professional woman happy",
+      image: "/placeholder.svg?height=40&width=40",
     },
     {
       name: "Tom B.",
       text: "Cut my insurance costs in half with Progressive.",
-      image: "/placeholder.svg?height=40&width=40&query=middle aged man pleased",
+      image: "/placeholder.svg?height=40&width=40",
     },
   ]
 
-  // Initialize counter effect for Options 2, 3, and 4
+  // Initialize counter effect for Options 2, 3, and 4, 6, and 7
   useEffect(() => {
-    if (params.option === "2" || params.option === "3" || params.option === "4") {
+    if (
+      params.option === "2" ||
+      params.option === "3" ||
+      params.option === "4" ||
+      params.option === "6" ||
+      params.option === "7"
+    ) {
       const interval = setInterval(() => {
         setCount((prevCount) => {
           // Increment by a random number between 1-3
@@ -210,6 +216,14 @@ export default function OfferwallPage({ params }: { params: { option: string } }
                           src={
                             option5Testimonials[currentQuoteIndex % option5Testimonials.length].image ||
                             "/placeholder.svg" ||
+                            "/placeholder.svg" ||
+                            "/placeholder.svg" ||
+                            "/placeholder.svg" ||
+                            "/placeholder.svg" ||
+                            "/placeholder.svg" ||
+                            "/placeholder.svg" ||
+                            "/placeholder.svg" ||
+                            "/placeholder.svg" ||
                             "/placeholder.svg"
                           }
                           alt={option5Testimonials[currentQuoteIndex % option5Testimonials.length].name}
@@ -304,32 +318,32 @@ export default function OfferwallPage({ params }: { params: { option: string } }
       {
         name: "Sarah K.",
         text: "I dropped my auto rate from $225/mo to $69/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=professional woman smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "Mike R.",
         text: "I dropped my auto rate from $189/mo to $52/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=professional man smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "Jessica M.",
         text: "I dropped my auto rate from $267/mo to $78/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=young woman smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "David L.",
         text: "I dropped my auto rate from $198/mo to $61/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=middle aged man smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "Amanda T.",
         text: "I dropped my auto rate from $234/mo to $71/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=woman with glasses smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "Chris B.",
         text: "I dropped my auto rate from $156/mo to $48/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=young man smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
     ]
 
@@ -498,32 +512,32 @@ export default function OfferwallPage({ params }: { params: { option: string } }
       {
         name: "Sarah K.",
         text: "I dropped my auto rate from $225/mo to $69/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=professional woman smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "Mike R.",
         text: "I dropped my auto rate from $189/mo to $52/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=professional man smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "Jessica M.",
         text: "I dropped my auto rate from $267/mo to $78/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=young woman smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "David L.",
         text: "I dropped my auto rate from $198/mo to $61/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=middle aged man smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "Amanda T.",
         text: "I dropped my auto rate from $234/mo to $71/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=woman with glasses smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
       {
         name: "Chris B.",
         text: "I dropped my auto rate from $156/mo to $48/mo in just 30 seconds",
-        image: "/placeholder.svg?height=40&width=40&query=young man smiling",
+        image: "/placeholder.svg?height=40&width=40",
       },
     ]
 
@@ -644,6 +658,323 @@ export default function OfferwallPage({ params }: { params: { option: string } }
 
               <div className="text-center mb-6">
                 <h2 className="text-3xl mb-2">Perfect timing! We've lowered rates in Florida</h2>
+              </div>
+
+              {/* CTA Button */}
+              <div className="mb-6">
+                <Link href="https://www.progressive.com" target="_blank" rel="noopener noreferrer">
+                  <button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded flex items-center justify-center">
+                    View My Rates <ArrowRight className="ml-2" size={18} />
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </main>
+        <style jsx>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+        `}</style>
+      </div>
+    )
+  }
+
+  // Option 6 - QualifyAuto highlight First Placement (Copy of Option 3)
+  if (params.option === "6") {
+    const testimonials = [
+      {
+        name: "Sarah K.",
+        text: "I dropped my auto rate from $225/mo to $69/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "Mike R.",
+        text: "I dropped my auto rate from $189/mo to $52/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "Jessica M.",
+        text: "I dropped my auto rate from $267/mo to $78/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "David L.",
+        text: "I dropped my auto rate from $198/mo to $61/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "Amanda T.",
+        text: "I dropped my auto rate from $234/mo to $71/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "Chris B.",
+        text: "I dropped my auto rate from $156/mo to $48/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+    ]
+
+    return (
+      <div className="min-h-screen bg-gray-100">
+        {/* Header */}
+        <header className="bg-white py-3 px-4 shadow-sm">
+          <div className="container mx-auto flex justify-between items-center">
+            <div className="relative h-12 w-48">
+              <Image
+                src="/images/logo.png"
+                alt="QualifyAuto.com Logo"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+            <div className="text-right">
+              <p className="text-xs text-gray-600">CALL TOLL-FREE M-F 7AM-7PM CST</p>
+              <a
+                href="tel:18449332220"
+                className="text-[#2048A8] font-bold text-lg flex items-center justify-end gap-1"
+              >
+                <Phone size={16} className="text-[#2048A8]" />
+                1-844-933-2220 <span className="font-normal">(TTY 711)</span>
+              </a>
+            </div>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <main className="container mx-auto px-4 py-12">
+          <div className="max-w-2xl mx-auto">
+            {/* Light Yellow Background Banner - Full Width */}
+            <div className="bg-yellow-50 -mx-[50vw] ml-[calc(50%-50vw)] px-[50vw] pl-[calc(50vw-50%)] py-6 mb-6">
+              <div className="max-w-2xl mx-auto">
+                {/* First Offer Block - Recommended */}
+                <div className="bg-white rounded-md shadow-lg border-2 border-[#2048A8] overflow-hidden p-6 relative">
+                  {/* Recommended Banner */}
+                  <div className="absolute top-0 left-0 right-0 bg-[#2048A8] text-white py-1 px-4 flex items-center justify-center">
+                    <Check className="h-4 w-4 mr-1" />
+                    <span className="text-sm font-medium">Recommended for you</span>
+                  </div>
+
+                  {/* Red Notification Badge - Larger */}
+                  <div className="absolute top-4 right-4 bg-red-500 rounded-full w-12 h-12 flex items-center justify-center z-10">
+                    <span className="text-white text-lg font-bold">1</span>
+                  </div>
+
+                  {/* Content with extra padding for the banner */}
+                  <div className="pt-6">
+                    <div className="flex justify-center mb-6">
+                      <div className="relative h-24 w-64">
+                        <Image
+                          src="/images/blue-background.gif"
+                          alt="Insurance Provider"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    </div>
+
+                    {/* CTA Button with notification and pulsating effect */}
+                    <div className="relative mb-0">
+                      <Link href="https://www.progressive.com" target="_blank" rel="noopener noreferrer">
+                        <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-8 rounded flex items-center justify-center animate-pulse-custom text-lg font-semibold">
+                          View My Rates <ArrowRight className="ml-2" size={18} />
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Second Offer Block */}
+            <div className="bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden p-8">
+              <div className="flex justify-center mb-6">
+                <div className="relative h-24 w-64">
+                  <Image src="/images/blue-background.gif" alt="Insurance Provider" fill className="object-contain" />
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="mb-6">
+                <Link href="https://www.progressive.com" target="_blank" rel="noopener noreferrer">
+                  <button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded flex items-center justify-center">
+                    View My Rates <ArrowRight className="ml-2" size={18} />
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Third Offer Block - Replica of Second */}
+            <div className="bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden p-8 mt-6">
+              <div className="flex justify-center mb-6">
+                <div className="relative h-24 w-64">
+                  <Image src="/images/blue-background.gif" alt="Insurance Provider" fill className="object-contain" />
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="mb-6">
+                <Link href="https://www.progressive.com" target="_blank" rel="noopener noreferrer">
+                  <button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded flex items-center justify-center">
+                    View My Rates <ArrowRight className="ml-2" size={18} />
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </main>
+        <style jsx>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
+        `}</style>
+      </div>
+    )
+  }
+
+  // Option 7 - QualifyAuto highlight First Placement 2 (Copy of Option 3)
+  if (params.option === "7") {
+    const testimonials = [
+      {
+        name: "Sarah K.",
+        text: "I dropped my auto rate from $225/mo to $69/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "Mike R.",
+        text: "I dropped my auto rate from $189/mo to $52/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "Jessica M.",
+        text: "I dropped my auto rate from $267/mo to $78/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "David L.",
+        text: "I dropped my auto rate from $198/mo to $61/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "Amanda T.",
+        text: "I dropped my auto rate from $234/mo to $71/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+      {
+        name: "Chris B.",
+        text: "I dropped my auto rate from $156/mo to $48/mo in just 30 seconds",
+        image: "/placeholder.svg?height=40&width=40",
+      },
+    ]
+
+    return (
+      <div className="min-h-screen bg-gray-100">
+        {/* Header */}
+        <header className="bg-white py-3 px-4 shadow-sm">
+          <div className="container mx-auto flex justify-between items-center">
+            <div className="relative h-12 w-48">
+              <Image
+                src="/images/logo.png"
+                alt="QualifyAuto.com Logo"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+            <div className="text-right">
+              <p className="text-xs text-gray-600">CALL TOLL-FREE M-F 7AM-7PM CST</p>
+              <a
+                href="tel:18449332220"
+                className="text-[#2048A8] font-bold text-lg flex items-center justify-end gap-1"
+              >
+                <Phone size={16} className="text-[#2048A8]" />
+                1-844-933-2220 <span className="font-normal">(TTY 711)</span>
+              </a>
+            </div>
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <main className="container mx-auto px-4 py-12">
+          <div className="max-w-2xl mx-auto">
+            {/* Blue Banner Behind First Card - Full Width */}
+            <div className="bg-blue-200 -mx-[50vw] ml-[calc(50%-50vw)] px-[50vw] pl-[calc(50vw-50%)] py-6 mb-6">
+              <div className="max-w-2xl mx-auto">
+                {/* First Offer Block - Recommended */}
+                <div className="bg-white rounded-md shadow-lg border-2 border-yellow-500 overflow-hidden relative">
+                  {/* Diagonal Gold Ribbon - Top Right Corner */}
+                  <div className="absolute top-0 right-0 w-0 h-0 border-l-[60px] border-l-transparent border-t-[60px] border-t-yellow-500">
+                    <div className="absolute top-[-40px] right-[-20px] flex items-center justify-center">
+                      <Star className="h-3 w-3 fill-white text-white" />
+                    </div>
+                  </div>
+                  {/* Content with extra padding for the banner */}
+                  <div className="p-4">
+                    <div className="flex justify-center mb-4">
+                      <div className="relative h-24 w-64">
+                        <Image
+                          src="/images/blue-background.gif"
+                          alt="Insurance Provider"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    </div>
+
+                    {/* CTA Button with notification and pulsating effect */}
+                    <div className="relative mb-0">
+                      <Link href="https://www.progressive.com" target="_blank" rel="noopener noreferrer">
+                        <button className="w-full bg-green-500 hover:bg-green-600 text-white py-8 rounded flex items-center justify-center animate-pulse-custom text-lg font-semibold">
+                          View My Rates <ArrowRight className="ml-2" size={18} />
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Second Offer Block */}
+            <div className="bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden p-8">
+              <div className="flex justify-center mb-6">
+                <div className="relative h-24 w-64">
+                  <Image src="/images/blue-background.gif" alt="Insurance Provider" fill className="object-contain" />
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="mb-6">
+                <Link href="https://www.progressive.com" target="_blank" rel="noopener noreferrer">
+                  <button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded flex items-center justify-center">
+                    View My Rates <ArrowRight className="ml-2" size={18} />
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Third Offer Block - Copy of Second */}
+            <div className="bg-white rounded-md shadow-lg border border-gray-200 overflow-hidden p-8 mt-6">
+              <div className="flex justify-center mb-6">
+                <div className="relative h-24 w-64">
+                  <Image src="/images/blue-background.gif" alt="Insurance Provider" fill className="object-contain" />
+                </div>
               </div>
 
               {/* CTA Button */}
@@ -824,7 +1155,7 @@ export default function OfferwallPage({ params }: { params: { option: string } }
           </div>
           <div className="text-right">
             <p className="text-xs text-gray-600">CALL TOLL-FREE M-F 7AM-7PM CST</p>
-            <a href="tel:18449332220" className="text-[#2048A8] font-bold text-lg flex items-center justify-end gap-1">
+            <a href="tel:18445541262" className="text-[#2048A8] font-bold text-lg flex items-center justify-end gap-1">
               <Phone size={16} className="text-[#2048A8]" />
               1-844-554-1262 <span className="font-normal">(TTY 711)</span>
             </a>
